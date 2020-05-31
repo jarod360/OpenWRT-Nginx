@@ -10,8 +10,8 @@ on:
 #      - master
 #    paths:
 #      - 'x64稳定版.config'
-  schedule:
-    - cron: 00 20 * * *
+#  schedule:
+#    - cron: 00 20 * * *
 #  watch:
 #    types: started
 
