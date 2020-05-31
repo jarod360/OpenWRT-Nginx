@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: x64开发版.config
   DIY_SH: 开发版.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
@@ -55,6 +55,10 @@ jobs:
       id: openwrt
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
+        cd openwrt
+        useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
+        echo "::set-env name=useVersionInfo::$useVersionInfo"
+        echo "::set-env name=DATE::$(date "+%Y-%m-%d %H:%M:%S")"
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
