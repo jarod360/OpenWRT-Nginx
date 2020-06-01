@@ -32,6 +32,9 @@ git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
 git clone --depth=1 https://github.com/SuLingGG/openwrt-package package/Lienol
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
-
+# Add luci-theme-atmaterial-ci
+git clone https://github.com/jarod360/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ci
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+./scripts/feeds update -a
+./scripts/feeds install -a
