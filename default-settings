@@ -1,0 +1,29 @@
+#!/bin/sh
+
+ln -sf /sbin/ip /usr/bin/ip
+sed -i 's/snapshots\(.*luci\)/releases\/19.07-SNAPSHOT\1/g' /etc/opkg/distfeeds.conf
+sed -i '/openwrt_custom/d' /etc/opkg/distfeeds.conf
+sed -i 's/http/https/g' /etc/opkg/distfeeds.conf
+sed -i "s/# //g" /etc/opkg/distfeeds.conf
+
+if [ ! -f /etc/config/placeholder ]; then
+  uci set luci.main.lang=zh_cn
+  uci set luci.main.mediaurlbase=/luci-static/argon
+  uci commit luci
+
+  uci set system.@system[0].timezone=CST-8
+  uci set system.@system[0].zonename=Asia/Shanghai
+  uci commit system
+
+  uci set fstab.@global[0].anon_mount=1
+  uci commit fstab
+  sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' /etc/shadow
+  uci set network.lan.ipaddr="192.168.0.250"
+  uci set network.wan.proto=pppoe
+  uci commit network
+  
+  sed -i '/ipv6.conf/d' /etc/sysctl.conf
+  echo net.ipv6.conf.all.disable_ipv6=1 >> /etc/sysctl.conf
+  echo net.ipv6.conf.default.disable_ipv6=1 >> /etc/sysctl.conf
+  echo net.ipv6.conf.lo.disable_ipv6 = 1 >> /etc/sysctl.conf
+  fi
