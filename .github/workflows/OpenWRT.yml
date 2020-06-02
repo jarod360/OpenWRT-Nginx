@@ -19,15 +19,14 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: config.seed
-  DIY_SH: 开发版.sh
+  DIY_SH: diy.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
   TZ: Asia/Shanghai
-  FILE_NAME: x64开发版
-
+  FILE_NAME: Lede-OpenWRT-Docker
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -74,7 +73,7 @@ jobs:
         ../$DIY_SH
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'sshx64开发版')
+      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'Lede-OpenWRT-Docker')
 
     - name: Download package
       id: package
@@ -119,9 +118,9 @@ jobs:
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.DATE }} 🚀 x64开发版 | 自动编译
+        name: ${{ env.DATE }} 🚀 Lede-OpenWRT-Docker | X86_64
         allowUpdates: true
-        tag: x64开发版
+        tag: Lede-OpenWRT-Docker
         commit: master
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
