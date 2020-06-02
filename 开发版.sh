@@ -25,7 +25,8 @@ git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-b
 git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-
+git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 # Add OpenClash
 git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
 # Add Lienol's Packages
