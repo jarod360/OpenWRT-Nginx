@@ -3,6 +3,8 @@
 sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
 #修改版本号
 sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+
+sed -i 's/downloads.openwrt.org/snapshots/g' /etc/opkg/distfeeds.conf
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
