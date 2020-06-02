@@ -9,7 +9,7 @@ on:
 #    branches:
 #      - master
 #    paths:
-#      - 'x64开发版.config'
+#      - 'config.seed'
 #  schedule:
 #    - cron: 35 18 * * *
   watch:
