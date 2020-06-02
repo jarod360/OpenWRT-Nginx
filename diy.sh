@@ -3,8 +3,14 @@
 sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
 #修改版本号
 sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+#修改默认密码为root
+sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' /etc/shadow
 
-sed -i 's/downloads.openwrt.org/snapshots/g' /etc/opkg/distfeeds.conf
+
+sed -i 's/openwrt.proxy.ustclug.org/downloads.openwrt.org/g' /etc/opkg/distfeeds.conf
+sed -i '/18.06.8/d' /etc/opkg/distfeeds.conf
+sed -i 's/releases/snapshots/g' /etc/opkg/distfeeds.conf
+
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
