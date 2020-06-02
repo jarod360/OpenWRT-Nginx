@@ -35,8 +35,7 @@ git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-cd -
-cp -f default-settings package/lean/default-settings/files/zzz-default-settings
+cp -f ./default-settings package/lean/default-settings/files/zzz-default-settings
 #修改版本号
 sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
 
