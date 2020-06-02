@@ -18,7 +18,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: x64开发版.config
+  CONFIG_FILE: config.seed
   DIY_SH: 开发版.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
