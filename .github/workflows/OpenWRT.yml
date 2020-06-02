@@ -1,8 +1,8 @@
-name: x64开发版
+name: Lede-OpenWRT-Docker
 
 on:
   repository_dispatch:
-    types: [x64开发版,sshx64开发版]
+    types: [Lede-OpenWRT-Docker,X86_64]
 #  release:
 #    types: published
 #  push:
