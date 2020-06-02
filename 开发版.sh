@@ -6,6 +6,7 @@ sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' pac
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-samba
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
