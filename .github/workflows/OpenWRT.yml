@@ -119,7 +119,7 @@ jobs:
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.DATE }} 🚀 Lede-OpenWRT-Docker | X86_64
+        name: ${{ env.DATE }} 🚀 OpenWRT-Docker | X86_64
         allowUpdates: true
         tag: Lede-OpenWRT-Docker
         commit: master
