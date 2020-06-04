@@ -42,7 +42,7 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 cp -f ../default-settings package/lean/default-settings/files/zzz-default-settings
 
 #修改版本号
-sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/base-files/files/etc/openwrt_release
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
