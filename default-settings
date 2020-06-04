@@ -26,3 +26,114 @@ if [ ! -f /etc/config/placeholder ]; then
   echo net.ipv6.conf.default.disable_ipv6=1 >> /etc/sysctl.conf
   echo net.ipv6.conf.lo.disable_ipv6 = 1 >> /etc/sysctl.conf
   fi
+
+  uci set smartdns.@smartdns[0].enabled='1'
+  uci set smartdns.@smartdns[0].port='5555'
+  uci set smartdns.@smartdns[0].redirect='none'
+  uci set smartdns.@smartdns[0].tcp_server='1'
+  uci set smartdns.@smartdns[0].prefetch_domain='1'
+  uci set smartdns.@smartdns[0].serve_expired='1'
+  uci commit smartdns
+  
+
+[ -f "/etc/config/smartdns" ] && {
+cat >> /etc/config/smartdns <<EOF
+config server
+	option name 'Tencent'
+	option type 'udp'
+	option enabled '1'
+	option ip '119.29.29.29'
+	option blacklist_ip '1'
+config server
+	option name 'AliDns'
+	option type 'udp'
+	option enabled '1'
+	option ip '223.5.5.5'
+	option blacklist_ip '1'
+config server
+	option name '114'
+	option type 'tcp'
+	option enabled '1'
+	option ip '114.114.114.114'
+	option blacklist_ip '1'
+config server
+	option name 'Cloudflare'
+	option ip '1.1.1.1'
+	option type 'tls'
+	option enabled '1'
+config server
+	option name 'OpenDns'
+	option ip '208.67.222.222'
+	option port '5353'
+	option type 'tcp'
+	option enabled '1'
+config server
+	option name 'Google'
+	option ip 'dns.google'
+	option type 'tls'
+	option enabled '1'
+config server
+	option name 'IBM'
+	option ip 'dns.quad9.net'
+	option type 'tls'
+	option enabled '1'
+config server
+	option type 'tcp'
+	option enabled '1'
+	option ip '210.0.255.250'
+	option blacklist_ip '0'
+	option name 'HGC'
+config server
+	option type 'udp'
+	option name 'Yinchuan'
+	option ip '202.100.96.68'
+	option blacklist_ip '1'
+	option enabled '0'
+config server
+	option name 'Taiwan'
+	option ip '168.95.1.1'
+	option type 'tcp'
+	option enabled '1'
+config server
+	option type 'tcp'
+	option ip '218.102.23.228'
+	option blacklist_ip '0'
+	option name 'PCCW'
+	option enabled '0'
+config server
+	option name 'Macao'
+	option ip '202.175.82.46'
+	option type 'tcp'
+	option enabled '1'
+config server
+	option name 'RubyFish'
+	option ip 'dns.rubyfish.cn'
+	option type 'tls'
+	option enabled '1'
+	option blacklist_ip '1'
+config server
+	option enabled '1'
+	option name 'Tsinghua'
+	option ip '101.6.6.6'
+	option port '5353'
+	option type 'tcp'
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'Baidu'
+	option ip '180.76.76.76'
+	option blacklist_ip '1'
+config server
+	option enabled '1'
+	option name 'Yandex'
+	option ip '77.88.8.8'
+	option type 'tcp'
+config server
+	option enabled '1'
+	option name 'TaiWan Quad101'
+	option ip '101.101.101.101'
+	option type 'tls'
+EOF
+}
+fi
+exit 0
