@@ -3,13 +3,15 @@
 sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
 #修改版本号
 sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+
 #修改默认密码为root
-sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' openwrt/files/etc/shadow
+sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' package/base-files/files/etc/shadow
 
+cp -f default-settings package/lean/default-settings/files/zzz-default-settings
 
-sed -i 's/openwrt.proxy.ustclug.org/downloads.openwrt.org/g' openwrt/files/etc/opkg/distfeeds.conf
-sed -i '/18.06.8/d' openwrt/files/etc/opkg/distfeeds.conf
-sed -i 's/releases/snapshots/g' openwrt/files/etc/opkg/distfeeds.conf
+sed -i 's/openwrt.proxy.ustclug.org/downloads.openwrt.org/g' package/base-files/files/etc/opkg/distfeeds.conf
+sed -i '/18.06.8/d' package/base-files/files/etc/opkg/distfeeds.conf
+sed -i 's/releases/snapshots/g' package/base-files/files/etc/opkg/distfeeds.conf
 
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
