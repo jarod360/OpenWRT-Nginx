@@ -95,7 +95,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: x64
+        name: OpenWRT-Docker
         path: openwrt/bin
 
     - name: Organize files
