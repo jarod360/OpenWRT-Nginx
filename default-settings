@@ -1,5 +1,8 @@
 #!/bin/sh
 
+uci set smartdns.@smartdns[0].ipv6_server='0'
+uci commit smartdns
+
 if [ ! -f /etc/config/placeholder ]; then
   uci set luci.main.lang=zh_cn
   uci set luci.main.mediaurlbase=/luci-static/atmaterial_ci
