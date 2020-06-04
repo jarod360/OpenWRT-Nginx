@@ -1,14 +1,14 @@
 #!/bin/bash
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
 #修改版本号
 sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
 
 #修改默认密码为root
-sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' package/base-files/files/etc/shadow
+#sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 #修改时区
-sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" package/base-files/files/bin/config_generate
+#sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" package/base-files/files/bin/config_generate
 
 cp -f ../default-settings package/lean/default-settings/files/zzz-default-settings
 
@@ -49,4 +49,4 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 #修改默认主题
-sed -i "s/material/atmaterial_ci/g" feeds/luci/modules/luci-base/root/etc/config/luci
+#sed -i "s/material/atmaterial_ci/g" feeds/luci/modules/luci-base/root/etc/config/luci
