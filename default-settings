@@ -19,7 +19,7 @@ if [ ! -f /etc/config/placeholder ]; then
   sed -i 's/openwrt.proxy.ustclug.org/downloads.openwrt.org/g' /etc/opkg/distfeeds.conf
   sed -i '/18.06.8/d' /etc/opkg/distfeeds.conf
   sed -i 's/releases/snapshots/g' /etc/opkg/distfeeds.conf
-  sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+ 
   
   sed -i '/ipv6.conf/d' /etc/sysctl.conf
   echo net.ipv6.conf.all.disable_ipv6=1 >> /etc/sysctl.conf
