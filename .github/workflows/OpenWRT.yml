@@ -2,7 +2,7 @@ name: Lede-OpenWRT-Docker
 
 on:
   repository_dispatch:
-    types: [Lede-OpenWRT-Docker,X86_64]
+    types: [OpenWRT-Docker,X86_64]
 #  release:
 #    types: published
 #  push:
@@ -26,7 +26,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
   TZ: Asia/Shanghai
-  FILE_NAME: Lede-OpenWRT-Docker
+  FILE_NAME: OpenWRT-Docker
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -73,7 +73,7 @@ jobs:
         ../$DIY_SH
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'Lede-OpenWRT-Docker')
+      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'OpenWRT-Docker')
 
     - name: Download package
       id: package
@@ -113,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: kx64
+        name: OpenWRT-Docker
         path: ${{ env.FIRMWARE }}
 
     - name: Create release
@@ -121,7 +121,7 @@ jobs:
       with:
         name: ${{ env.DATE }} 🚀 OpenWRT-Docker | X86_64
         allowUpdates: true
-        tag: Lede-OpenWRT-Docker
+        tag: OpenWRT-Docker
         commit: master
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
