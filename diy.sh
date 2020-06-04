@@ -7,11 +7,8 @@ sed -i 's/OpenWrt/JarodChang Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt/g' pac
 #修改默认密码为root
 sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' package/base-files/files/etc/shadow
 
-cp -f default-settings package/lean/default-settings/files/zzz-default-settings
-
-sed -i 's/openwrt.proxy.ustclug.org/downloads.openwrt.org/g' package/base-files/files/etc/opkg/distfeeds.conf
-sed -i '/18.06.8/d' package/base-files/files/etc/opkg/distfeeds.conf
-sed -i 's/releases/snapshots/g' package/base-files/files/etc/opkg/distfeeds.conf
+#修改时区
+sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" package/base-files/files/bin/config_generate
 
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
@@ -49,3 +46,5 @@ git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon pack
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+#修改默认主题
+sed -i "s/material/atmaterial_ci/g" feeds/luci/modules/luci-base/root/etc/config/luci
