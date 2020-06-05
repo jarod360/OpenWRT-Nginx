@@ -43,5 +43,6 @@ cp -f ../default-settings package/lean/default-settings/files/zzz-default-settin
 if [ -n "$(ls -A "patches" 2>/dev/null)" ]; then
    find "patches" -type f -name '*.patch'| xargs -i git apply {}
 fi
+sed -i "s/# REVISION:=x/REVISION:= $date/g" include/version.mk
 ./scripts/feeds update -a
 ./scripts/feeds install -a
