@@ -19,6 +19,9 @@ if [ ! -f /etc/config/placeholder ]; then
   uci set network.wan.proto=pppoe
   uci commit network
   
+  date=`date +%m.%d.%Y`
+  sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
+  echo "DISTRIB_REVISION='$date'" >> /etc/openwrt_release
   sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
   echo "DISTRIB_DESCRIPTION='OpenWrt Build By JarodChang'" >> /etc/openwrt_release
   
@@ -32,7 +35,7 @@ if [ ! -f /etc/config/placeholder ]; then
   echo net.ipv6.conf.default.disable_ipv6=1 >> /etc/sysctl.conf
   echo net.ipv6.conf.lo.disable_ipv6 = 1 >> /etc/sysctl.conf
 
-  uci set smartdns.@smartdns[0].enabled='1'
+  uci set smartdns.@smartdns[0].enabled='0'
   uci set smartdns.@smartdns[0].port='5555'
   uci set smartdns.@smartdns[0].redirect='none'
   uci set smartdns.@smartdns[0].tcp_server='1'
