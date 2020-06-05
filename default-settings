@@ -19,6 +19,9 @@ if [ ! -f /etc/config/placeholder ]; then
   uci set network.wan.proto=pppoe
   uci commit network
   
+  date=`date +%Y.%m.%d`	
+  sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release	
+  echo "DISTRIB_REVISION='$date'" >> /etc/openwrt_release
   sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
   echo "DISTRIB_DESCRIPTION='OpenWrt Build By JarodChang'" >> /etc/openwrt_release
   
