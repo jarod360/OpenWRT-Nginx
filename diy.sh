@@ -40,8 +40,6 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 
 #加载个性化配置
 cp -f ../default-settings package/lean/default-settings/files/zzz-default-settings
-if [ -n "$(ls -A "patches" 2>/dev/null)" ]; then
-   find "patches" -type f -name '*.patch'| xargs -i git apply {}
-fi
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
