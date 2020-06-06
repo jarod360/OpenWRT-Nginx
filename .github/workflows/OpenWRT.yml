@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: config.seed
   DIY_SH: diy.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
