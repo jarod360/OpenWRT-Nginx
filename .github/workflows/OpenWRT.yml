@@ -78,7 +78,6 @@ jobs:
     - name: Download package
       id: package
       run: |
-        [ -e files ] && mv files openwrt/files
         cd openwrt
         make defconfig
         make download -j8
