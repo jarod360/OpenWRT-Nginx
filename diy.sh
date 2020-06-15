@@ -36,7 +36,7 @@ git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon pack
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 #加载个性化配置
-cp -f default-settings package/lean/default-settings/files/zzz-default-settings
+cp -f ../default-settings package/lean/default-settings/files/zzz-default-settings
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
