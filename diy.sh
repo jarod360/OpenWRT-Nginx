@@ -26,8 +26,7 @@ git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-# Add Lienol's Packages
-git clone https://github.com/SuLingGG/openwrt-package package/Lienol
+
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
