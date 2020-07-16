@@ -11,7 +11,7 @@ on:
 #    paths:
 #      - 'config.seed'
 #  schedule:
-#    - cron: 35 18 * * *
+    - cron: 0 16 * * 6
   watch:
     types: started
 
