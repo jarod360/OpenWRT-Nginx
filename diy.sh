@@ -26,6 +26,7 @@ git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
+git clone https://github.com/kenzok8/small.git package/small
 
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
