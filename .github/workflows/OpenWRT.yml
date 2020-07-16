@@ -10,7 +10,7 @@ on:
 #      - master
 #    paths:
 #      - 'config.seed'
-#  schedule:
+    schedule:
     - cron: 0 16 * * 6
   watch:
     types: started
