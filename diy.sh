@@ -11,7 +11,7 @@ git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dock
 git clone https://github.com/Repobor/luci-app-koolproxyR.git package/luci-app-koolproxyR
 svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tcping
 git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
+git clone https://github.com/peter-tank/luci-app-ssr-plus package/luci-app-ssr-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/brook
 svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/ipt2socks
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
