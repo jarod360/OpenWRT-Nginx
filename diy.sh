@@ -8,7 +8,7 @@ rm -rf package/lean/luci-theme-argon
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
-git clone https://github.com/Repobor/luci-app-koolproxyR.git package/luci-app-koolproxyR
+git clone https://github.com/cnzd/luci-app-koolproxyR.git package/luci-app-koolproxyR
 svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tcping
 git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
 #git clone https://github.com/peter-tank/luci-app-ssr-plus package/luci-app-ssr-plus
