@@ -11,12 +11,14 @@ git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dock
 git clone https://github.com/Repobor/luci-app-koolproxyR.git package/luci-app-koolproxyR
 svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tcping
 git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
-git clone https://github.com/peter-tank/luci-app-ssr-plus package/luci-app-ssr-plus
+#git clone https://github.com/peter-tank/luci-app-ssr-plus package/luci-app-ssr-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/brook
 svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/ipt2socks
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-acme package/luci-app-acme
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
 git clone https://github.com/garypang13/openwrt-adguardhome package/adguardhome
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
@@ -27,9 +29,12 @@ git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone https://github.com/kenzok8/small.git package/small
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+git clone https://github.com/fw876/helloworld.git package/helloworld
+git clone https://github.com/jerrykuku/node-request.git package/node-request
 
 # Add Rclone-OpenWrt
-git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
+#git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
