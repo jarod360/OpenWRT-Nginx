@@ -8,15 +8,14 @@ rm -rf package/lean/luci-theme-argon
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
-git clone https://github.com/cnzd/luci-app-koolproxyR.git package/luci-app-koolproxyR
-svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tcping
-git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
-#git clone https://github.com/peter-tank/luci-app-ssr-plus package/luci-app-ssr-plus
-svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/brook
-svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/ipt2socks
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/tcping package/tcping
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/chinadns-ng package/chinadns-ng
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/brook
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ipt2socks package/ipt2socks
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-acme package/luci-app-acme
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
@@ -34,7 +33,7 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/jerrykuku/node-request.git package/node-request
 
 # Add Rclone-OpenWrt
-#git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
+git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
