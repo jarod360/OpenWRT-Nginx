@@ -22,7 +22,7 @@ env:
   DIY_SH: diy.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: true
+  UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
