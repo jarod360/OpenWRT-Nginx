@@ -75,14 +75,7 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
-        sed -i 's/OpenWrt/By Jarod Binld ${{ env.DATE1 }} @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
-        sed -i '/openwrt_luci/ { s/sed/#sed/g; }' package/lean/default-settings/files/zzz-default-settings
-        sed -i 's|openwrt.proxy.ustclug.org|256pd.top:9666/开发版/x64|g' package/lean/default-settings/files/zzz-default-settings
-        sed -i '/downloads/ { s/s\//s|/g; }' package/lean/default-settings/files/zzz-default-settings
-        sed -i '/downloads/ { s/org\//org|/g; }' package/lean/default-settings/files/zzz-default-settings
-        sed -i '/downloads/ { s/x64\//x64|/g; }' package/lean/default-settings/files/zzz-default-settings
-        sed -i 's/http:/snapshots/' package/lean/default-settings/files/zzz-default-settings
-        sed -i 's/https:/bin/g' package/lean/default-settings/files/zzz-default-settings
+
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@main
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'OpenWRT-Docker')
