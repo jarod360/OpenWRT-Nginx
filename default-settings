@@ -8,6 +8,16 @@ if [ ! -f /etc/config/placeholder ]; then
   uci set luci.main.mediaurlbase=/luci-static/atmaterial_ci
   uci commit luci
 
+  echo "::set-env name=DATE1::$(date "+%Y.%m.%d")"
+  sed -i 's/OpenWrt/By Jarod Build ${{ env.DATE1 }} @ OpenWrt/g' /etc/openwrt_release
+  sed -i '/openwrt_luci/ { s/sed/#sed/g; }' /etc/opkg/distfeeds.conf
+  sed -i 's|openwrt.proxy.ustclug.org|256pd.top:9666/开发版/x64|g' /etc/opkg/distfeeds.conf
+  sed -i '/downloads/ { s/s\//s|/g; }' /etc/opkg/distfeeds.conf
+  sed -i '/downloads/ { s/org\//org|/g; }' /etc/opkg/distfeeds.conf
+  sed -i '/downloads/ { s/x64\//x64|/g; }' /etc/opkg/distfeeds.conf
+  sed -i 's/http:/snapshots/' /etc/opkg/distfeeds.conf
+  sed -i 's/https:/bin/g' /etc/opkg/distfeeds.conf
+
   uci set system.@system[0].timezone=CST-8
   uci set system.@system[0].zonename=Asia/Shanghai
   uci commit system
