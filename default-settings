@@ -60,7 +60,6 @@ config server
 	option ip '119.29.29.29'
 	option server_group 'China'
 	option blacklist_ip '0'
-
 config server
 	option name 'AliDns'
 	option type 'udp'
@@ -68,7 +67,6 @@ config server
 	option ip '223.5.5.5'
 	option server_group 'China'
 	option blacklist_ip '0'
-
 config server
 	option name '114'
 	option type 'tcp'
@@ -76,7 +74,6 @@ config server
 	option ip '114.114.114.114'
 	option server_group 'China'
 	option blacklist_ip '0'
-
 config server
 	option name 'Cloudflare'
 	option ip '1.1.1.1'
@@ -84,7 +81,6 @@ config server
 	option enabled '1'
 	option blacklist_ip '0'
 	option server_group 'World'
-
 config server
 	option name 'OpenDns'
 	option ip '208.67.222.222'
@@ -93,7 +89,6 @@ config server
 	option enabled '1'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option name 'Google'
 	option ip 'dns.google'
@@ -101,7 +96,6 @@ config server
 	option enabled '1'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option name 'IBM'
 	option ip 'dns.quad9.net'
@@ -109,7 +103,6 @@ config server
 	option enabled '1'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option type 'tcp'
 	option enabled '1'
@@ -117,7 +110,6 @@ config server
 	option blacklist_ip '0'
 	option name 'HGC'
 	option server_group 'World'
-
 config server
 	option type 'udp'
 	option name 'Yinchuan'
@@ -125,7 +117,6 @@ config server
 	option server_group 'China'
 	option blacklist_ip '0'
 	option enabled '1'
-
 config server
 	option name 'Taiwan'
 	option ip '168.95.1.1'
@@ -133,7 +124,6 @@ config server
 	option enabled '1'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option type 'tcp'
 	option ip '218.102.23.228'
@@ -141,7 +131,6 @@ config server
 	option name 'PCCW'
 	option server_group 'World'
 	option enabled '1'
-
 config server
 	option name 'Macao'
 	option ip '202.175.82.46'
@@ -149,7 +138,6 @@ config server
 	option enabled '1'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option name 'RubyFish'
 	option ip 'dns.rubyfish.cn'
@@ -157,7 +145,6 @@ config server
 	option enabled '1'
 	option server_group 'China'
 	option blacklist_ip '0'
-
 config server
 	option enabled '1'
 	option name 'Tsinghua'
@@ -166,7 +153,6 @@ config server
 	option type 'tcp'
 	option blacklist_ip '0'
 	option server_group 'China'
-
 config server
 	option enabled '1'
 	option type 'udp'
@@ -174,7 +160,6 @@ config server
 	option ip '180.76.76.76'
 	option server_group 'China'
 	option blacklist_ip '0'
-
 config server
 	option enabled '1'
 	option name 'Yandex'
@@ -182,7 +167,6 @@ config server
 	option type 'tcp'
 	option server_group 'World'
 	option blacklist_ip '0'
-
 config server
 	option enabled '1'
 	option name 'TaiWan Quad101'
