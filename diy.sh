@@ -1,7 +1,10 @@
 #!/bin/bash
-# Modify default IP
-#sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
-
+# 修改默认 IP
+sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_generate
+# 修改默认主题
+sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial-ColorIcon/g' feeds/luci/collections/luci/Makefile
+# 修改版本信息
+sed -i 's/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt Build By JarodChang'/g' package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
@@ -40,7 +43,7 @@ git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon pack
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 #加载个性化配置
-cp -f $GITHUB_WORKSPACE/default-settings package/lean/default-settings/files/zzz-default-settings
+#cp -f $GITHUB_WORKSPACE/default-settings package/lean/default-settings/files/zzz-default-settings
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
