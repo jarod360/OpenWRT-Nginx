@@ -4,7 +4,7 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 # 修改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial-ColorIcon/g' feeds/luci/collections/luci/Makefile
 # 修改版本信息
-sed -i 's/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt Build By JarodChang'/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/OpenWrt/OpenWrt Build By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
