@@ -8,11 +8,6 @@ uci commit smartdns
   echo "DISTRIB_REVISION='$date'" >> /etc/openwrt_release
   sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
   echo "DISTRIB_DESCRIPTION='OpenWrt Build By JarodChang'" >> /etc/openwrt_release
-  
-  sed -i 's/http/https/g' /etc/opkg/distfeeds.conf
-  sed -i 's/openwrt.proxy.ustclug.org/mirrors.bfsu.edu.cn/g' /etc/opkg/distfeeds.conf
-  sed -i '/18.06.8/d' /etc/opkg/distfeeds.conf
-  sed -i 's/releases/snapshots/g' /etc/opkg/distfeeds.conf
 
 if [ ! -f /etc/config/placeholder ]; then
   uci set luci.main.lang=zh_cn
