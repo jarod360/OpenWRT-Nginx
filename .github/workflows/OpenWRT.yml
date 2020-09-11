@@ -1,4 +1,4 @@
-name: OpenWRT-Docker
+name: OpenWRT-Docker开发版
 
 on:
   repository_dispatch:
