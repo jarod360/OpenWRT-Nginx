@@ -20,9 +20,8 @@ svn co https://github.com/xiaorouji/openwrt-package/trunk/package/chinadns-ng pa
 svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/brook
 svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ipt2socks package/ipt2socks
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
-svn co https://github.com/openwrt/luci/trunk/applications/luci-app-acme package/luci-app-acme
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
-svn co https://github.com/coolsnowwolf/packages/trunkr/net/https-dns-proxy package/https-dns-proxy
+svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
