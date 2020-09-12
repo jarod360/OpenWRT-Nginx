@@ -7,16 +7,10 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
 # 修改默认源
-sed -i '/openwrt_luci/ { s/sed/#sed/g; }' package/lean/default-settings/files/zzz-default-settings
-sed -i 's|openwrt.proxy.ustclug.org|256pd.top:9666/开发版/x64|g' package/lean/default-settings/files/zzz-default-settings
-sed -i '/downloads/ { s/s\//s|/g; }' package/lean/default-settings/files/zzz-default-settings
-sed -i '/downloads/ { s/org\//org|/g; }' package/lean/default-settings/files/zzz-default-settings
-sed -i '/downloads/ { s/x64\//x64|/g; }' package/lean/default-settings/files/zzz-default-settings
-sed -i 's/http:/snapshots/' package/lean/default-settings/files/zzz-default-settings
-sed -i 's/https:/bin/g' package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
+rm -rf feeds/packages/net/https-dns-proxy
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
@@ -28,6 +22,7 @@ svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ipt2socks pack
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-acme package/luci-app-acme
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/coolsnowwolf/packages/trunkr/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
