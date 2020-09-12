@@ -23,7 +23,7 @@ config smartdns
 	option rr_ttl_max '3600'
 	option seconddns_no_rule_addr '0'
 	option port '6053'
-	option enabled '1'
+	option enabled '0'
 	option redirect 'none'
 	list old_redirect 'none'
 	list old_port '6053'
