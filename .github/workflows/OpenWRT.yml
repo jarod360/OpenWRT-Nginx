@@ -27,7 +27,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
   TZ: Asia/Shanghai
-  FILE_NAME: OpenWRT-Docker
+  FILE_NAME: OpenWRT-Docker开发版
 
 jobs:
   build:
