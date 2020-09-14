@@ -7,8 +7,8 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
 # 移除https-dns-proxy自启
-echo "/etc/init.d/https-dns-proxy disable" >> package/lean/default-settings/files/zzz-default-settings
-echo "/etc/init.d/https-dns-proxy stop" >> package/lean/default-settings/files/zzz-default-settings
+echo /etc/init.d/https-dns-proxy disable >> package/lean/default-settings/files/zzz-default-settings
+echo /etc/init.d/https-dns-proxy stop >> package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
