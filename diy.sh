@@ -6,13 +6,9 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 # 修改版本信息
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
-# 移除https-dns-proxy自启
-#echo /etc/init.d/https-dns-proxy disable >> package/lean/default-settings/files/zzz-default-settings
-#echo /etc/init.d/https-dns-proxy stop >> package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
-#rm -rf feeds/packages/net/https-dns-proxy
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
@@ -23,7 +19,7 @@ svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/
 svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ipt2socks package/ipt2socks
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
-#svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy package/https-dns-proxy
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-https-dns-proxy package/luci-app-https-dns-proxy
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
