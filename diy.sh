@@ -11,7 +11,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 # 移除https-dns-proxy自启
 echo /etc/init.d/https-dns-proxy disable >> package/lean/default-settings/files/zzz-default-settings
 echo /etc/init.d/https-dns-proxy stop >> package/lean/default-settings/files/zzz-default-settings
-echo rm -rf /etc/rc.d/S80https-dns-proxy >> package/lean/default-settings/files/zzz-default-settings
+#echo rm -rf /etc/rc.d/S80https-dns-proxy >> package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
