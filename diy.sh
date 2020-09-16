@@ -9,8 +9,8 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-se
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 移除https-dns-proxy自启
-echo /etc/init.d/https-dns-proxy disable >> package/lean/default-settings/files/zzz-default-settings
-echo /etc/init.d/https-dns-proxy stop >> package/lean/default-settings/files/zzz-default-settings
+#echo /etc/init.d/https-dns-proxy disable >> package/lean/default-settings/files/zzz-default-settings
+#echo /etc/init.d/https-dns-proxy stop >> package/lean/default-settings/files/zzz-default-settings
 #echo rm -rf /etc/rc.d/S80https-dns-proxy >> package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
