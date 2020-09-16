@@ -9,7 +9,7 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-se
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 移除https-dns-proxy自启
-rm -rf feeds/packages/net/https-dns-proxy/files/https-dns-proxy.init
+#rm -rf feeds/packages/net/https-dns-proxy/files/https-dns-proxy.init
 curl -fsSL https://raw.githubusercontent.com/Lienol/openwrt-packages/dev-19.07/net/https-dns-proxy/files/https-dns-proxy.init > feeds/packages/net/https-dns-proxy/files/https-dns-proxy.init
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
