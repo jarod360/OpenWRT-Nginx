@@ -26,7 +26,7 @@ svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/l
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-aduardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-aduardhome
 git clone https://github.com/garypang13/openwrt-adguardhome package/adguardhome
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
