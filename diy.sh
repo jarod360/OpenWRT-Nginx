@@ -37,7 +37,6 @@ git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone https://github.com/kenzok8/small.git package/small
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
-git clone https://github.com/jerrykuku/node-request.git package/node-request
 
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
