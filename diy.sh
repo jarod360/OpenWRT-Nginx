@@ -18,8 +18,18 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/brook
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/chinadns-ng package/chinadns-ng
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-go package/trojan-go
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-plus package/trojan-plus
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ssocks package/ssocks
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/dns2socks package/dns2socks
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/kcptun package/kcptun
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/ipt2socks package/ipt2socks
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/naiveproxy package/naiveproxy
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/pdnsd-alt package/pdnsd-alt
+svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan package/trojan
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-package/trunk/package package/lienol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-aduardhome
@@ -31,7 +41,6 @@ git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-git clone https://github.com/kenzok8/small.git package/small
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 
