@@ -39,9 +39,7 @@ CONFIG_OPENSSL_WITH_EC2M=y
 CONFIG_OPENSSL_WITH_NPN=y
 # CONFIG_PACKAGE_UnblockNeteaseMusic is not set
 # CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
-# CONFIG_PACKAGE_acme is not set
 # CONFIG_PACKAGE_adbyby is not set
-CONFIG_PACKAGE_adguardhome=y
 CONFIG_PACKAGE_appfilter=y
 # CONFIG_PACKAGE_ath10k-firmware-qca9888 is not set
 # CONFIG_PACKAGE_ath10k-firmware-qca988x is not set
