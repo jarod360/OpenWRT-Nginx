@@ -64,9 +64,9 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/openwrt)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
-        echo "::set-env name=useVersionInfo::$useVersionInfo"
-        echo "::set-env name=DATE::$(date "+%Y-%m-%d-%H:%M:%S")"
-        echo "::set-env name=DATE1::$(date "+%Y.%m.%d")"
+        echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
+        echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
+        echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
 
     - name: Load custom configuration
       run: |
@@ -111,7 +111,7 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         bzip2 *.img
-        echo "::set-env name=FIRMWARE::$PWD"
+        echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
     - name: Upload bin directory
