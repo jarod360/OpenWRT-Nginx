@@ -13,14 +13,13 @@ curl -fsSL https://raw.githubusercontent.com/Lienol/openwrt-packages/dev-19.07/n
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
-rm -rf packages/net/haproxy
+rm -rf feeds/packages/net/haproxy
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 svn co https://github.com/Beginner-Go/packages/trunk/net/haproxy package/haproxy
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
-git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-aduardhome
@@ -34,7 +33,7 @@ git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-s
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
-
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
