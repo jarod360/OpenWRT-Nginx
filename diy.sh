@@ -14,8 +14,8 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
 #添加额外软件包
-svn co https://github.com/liuran001/openwrt-packages/trunk/smartdns package/smartdns
-svn co https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
