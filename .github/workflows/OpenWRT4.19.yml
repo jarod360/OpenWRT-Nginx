@@ -11,7 +11,7 @@ on:
 #    paths:
 #      - 'x64.config'
   schedule:
-    - cron: 00 18 * * *
+    - cron: 00 22 * * *
   watch:
     types: started
 
