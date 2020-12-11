@@ -134,7 +134,7 @@ jobs:
       with:
         name: ${{ env.DATE }} 🚀 OpenWRT-Docker4.19| 开发版
         allowUpdates: true
-        tag: X86_64
+        tag: X86_64_4.19
         commit: master
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
