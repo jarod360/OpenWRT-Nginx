@@ -26,10 +26,10 @@ svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/l
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff package/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
+svn co https://github.com/siropboy/mypackages/trunk/adguardhome package/adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/garypang13/openwrt-adguardhome package/adguardhome
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
 git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
