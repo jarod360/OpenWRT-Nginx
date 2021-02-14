@@ -60,6 +60,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
+        sed -i '/^\/etc\/profile/d' package/base-files/Makefile
         sed -i 's/src-git helloworld/#src-git helloworld/g' ./feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
