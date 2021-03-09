@@ -22,6 +22,7 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced package/lu
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-aduardhome
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
