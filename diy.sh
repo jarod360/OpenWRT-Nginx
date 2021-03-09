@@ -17,7 +17,7 @@ svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy pack
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
-svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
+#svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/adguardhome
