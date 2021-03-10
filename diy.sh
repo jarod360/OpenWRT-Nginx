@@ -16,12 +16,12 @@ rm -rf feeds/packages/net/https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/sirpdboy-package/trunk/smartdns package/smartdns
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-smartdns package/luci-app-smartdns
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
 #svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/adguardhome
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
