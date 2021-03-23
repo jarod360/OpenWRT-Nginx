@@ -14,8 +14,8 @@ rm -rf package/lean/luci-theme-argon
 rm -rf feeds/packages/net/https-dns-proxy
 #添加额外软件包
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
-svn co https://github.com/siropboy/sirpdboy-package/trunk/smartdns package/smartdns
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
 #svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
