@@ -84,7 +84,7 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        make download -j$(($(nproc)+1)) &
+        make download -j8
 
     - name: Compile the firmware
       id: compile
