@@ -39,13 +39,13 @@ CONFIG_OPENSSL_WITH_NPN=y
 # CONFIG_PACKAGE_UnblockNeteaseMusic is not set
 # CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
 # CONFIG_PACKAGE_adbyby is not set
-CONFIG_PACKAGE_adguardhome=y
 CONFIG_PACKAGE_appfilter=y
 # CONFIG_PACKAGE_ath10k-firmware-qca9888 is not set
 # CONFIG_PACKAGE_ath10k-firmware-qca988x is not set
 # CONFIG_PACKAGE_ath10k-firmware-qca9984 is not set
 # CONFIG_PACKAGE_ath9k-htc-firmware is not set
 # CONFIG_PACKAGE_autosamba is not set
+CONFIG_PACKAGE_autocore-x86=y
 CONFIG_PACKAGE_bind-dig=y
 CONFIG_PACKAGE_bind-libs=y
 CONFIG_PACKAGE_blkid=y
@@ -314,7 +314,6 @@ CONFIG_PERL_THREADS=y
 CONFIG_RUNC_SECCOMP=y
 CONFIG_SQLITE_FTS3=y
 CONFIG_SQLITE_RTREE=y
-
 CONFIG_TARGET_ROOTFS_PARTSIZE=1124
 CONFIG_TROJAN_GO_COMPRESS_UPX=y
 # CONFIG_UnblockNeteaseMusic_Go is not set
