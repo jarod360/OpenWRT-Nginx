@@ -26,10 +26,11 @@ svn co https://github.com/garypang13/openwrt-packages/trunk/libcron package/libc
 svn co https://github.com/garypang13/openwrt-packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/garypang13/openwrt-packages/trunk/rapidjson package/rapidjson
 svn co https://github.com/garypang13/openwrt-packages/trunk/subconverter package/subconverter
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+#git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
 git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
