@@ -25,7 +25,7 @@ svn co https://github.com/garypang13/openwrt-packages/trunk/jpcre2 package/jpcre
 svn co https://github.com/garypang13/openwrt-packages/trunk/libcron package/libcron
 svn co https://github.com/garypang13/openwrt-packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/garypang13/openwrt-packages/trunk/rapidjson package/rapidjson
-svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
+svn co https://github.com/garypang13/openwrt-packages/trunk/subconverter package/subconverter
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
