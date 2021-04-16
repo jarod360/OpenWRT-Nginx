@@ -12,7 +12,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
 rm -rf feeds/packages/net/https-dns-proxy
-cp -rf ./patches/01.patch package/lean/v2ray-plugin/
+#cp -rf ./patches/01.patch package/lean/v2ray-plugin/
 #添加额外软件包
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
