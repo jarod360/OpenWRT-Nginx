@@ -12,6 +12,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
 rm -rf feeds/packages/net/https-dns-proxy
+cp -r -f /patches package/lean/v2ray-plugin/
 #添加额外软件包
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
@@ -38,7 +39,7 @@ git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-cp -r -f /patches package/lean/v2ray-plugin/
+
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
