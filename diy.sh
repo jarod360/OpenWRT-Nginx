@@ -32,8 +32,8 @@ git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dock
 #git clone https://github.com/wwqgtxx-openwrt/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
-git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
-git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
+#git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
+#git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
