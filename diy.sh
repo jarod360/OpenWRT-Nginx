@@ -7,7 +7,7 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, %C By JarodChang/g' package/base-files/files/etc/banner
-memclean=`'*/60 * * * * sh/etc/memclean.sh' ＞ $(1)/etcrontabs/root`
+memclean=`memclean +'*/60 * * * * sh/etc/memclean.sh' ＞ $(1)/etcrontabs/root`
 sed '161a\echo '$memclean'' package/base-files/Makefile
 sed '182a\chmod 7777 $(1)/etc/memclean.sh' package/base-files/Makefile
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
