@@ -9,7 +9,6 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-se
 sed -i 's/%D %V, %C/%D %V, %C By JarodChang/g' package/base-files/files/etc/banner
 sed -i '161a\	echo \'*/60 * * * * sh/etc/memclean.sh\' ＞ $(1)/etcrontabs/root' package/base-files/Makefile
 sed -i '182a\	chmod 7777 $(1)/etc/memclean.sh' package/base-files/Makefile
-
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
