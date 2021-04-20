@@ -8,7 +8,7 @@ date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, '$date' By JarodChang/g' package/base-files/files/etc/banner
 sed -i "28a\echo \'*/60 * * * * sh/etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
-sed -i '182a\	chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
+sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 #移除不用软件包    
