@@ -11,6 +11,7 @@ sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" pack
 sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
 sed -i "248a\		set system.@system[-1].conloglevel=\'1\'" package/base-files/files/bin/config_generate
 sed -i "249a\		set system.@system[-1].kconloglevel=\'1\'" package/base-files/files/bin/config_generate
+sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
