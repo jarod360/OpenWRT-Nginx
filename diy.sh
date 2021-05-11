@@ -5,10 +5,12 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 #sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial-ColorIcon/g' feeds/luci/collections/luci/Makefile
 # 修改版本信息
 date=`date +%Y.%m.%d`
-sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
-sed -i 's/%D %V, %C/%D %V, '$date' By JarodChang/g' package/base-files/files/etc/banner
+sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
+#加入定时清理内存
 sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
 sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
+#屏蔽启动信息打印
 sed -i "248a\		set system.@system[-1].conloglevel=\'1\'" package/base-files/files/bin/config_generate
 sed -i "249a\		set system.@system[-1].kconloglevel=\'1\'" package/base-files/files/bin/config_generate
 sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
