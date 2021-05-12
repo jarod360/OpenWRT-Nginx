@@ -44,6 +44,7 @@ git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-b
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
+rm -rf package/helloworld/shadowsocksr-libev
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 
 # Add Rclone-OpenWrt
