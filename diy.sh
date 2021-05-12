@@ -14,7 +14,7 @@ sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
 sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
-sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
+#sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
