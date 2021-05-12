@@ -46,6 +46,11 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 rm -rf package/passwall/shadowsocksr-libev
+rm -rf package/passwall/v2ray-core
+rm -rf package/passwall/v2ray-plugin
+rm -rf package/passwall/xray-core
+rm -rf package/passwall/xray-plugin
+
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
