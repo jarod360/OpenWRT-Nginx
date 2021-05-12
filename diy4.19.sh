@@ -8,15 +8,12 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 #sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial-ColorIcon/g' feeds/luci/collections/luci/Makefile
 # 修改版本信息
 date=`date +%Y.%m.%d`
-sed -i 's/OpenWrt/OpenWrt Build '$date' By JarodChang/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
-# 移除https-dns-proxy自启
-# curl -fsSL https://raw.githubusercontent.com/Lienol/openwrt-packages/dev-19.07/net/https-dns-proxy/files/https-dns-proxy.init > feeds/packages/net/https-dns-proxy/files/https-dns-proxy.init
-#移除不用软件包    
+#移出不用软件包
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
-rm -rf feeds/packages/net/https-dns-proxy
 #添加额外软件包
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
 svn co https://github.com/siropboy/sirpdboy-package/trunk/smartdns package/smartdns
@@ -38,6 +35,11 @@ git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
+rm -rf package/passwall/shadowsocksr-libev
+rm -rf package/passwall/v2ray-core
+rm -rf package/passwall/v2ray-plugin
+rm -rf package/passwall/xray-core
+rm -rf package/passwall/xray-plugin
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
