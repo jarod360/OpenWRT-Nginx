@@ -10,8 +10,9 @@ on:
 #      - main
 #    paths:
 #      - 'x64.config'
-  schedule:
-    - cron: 00 18 * * *
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
   watch:
     types: started
 
