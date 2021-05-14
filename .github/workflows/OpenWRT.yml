@@ -3,13 +3,10 @@ name: OpenWRT-Docker开发版
 on:
   repository_dispatch:
     types: [OpenWRT-Docker,X86_64]
-#  release:
-#    types: published
-#  push:
-#    branches:
-#      - main
-#    paths:
-#      - 'x64.config'
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
