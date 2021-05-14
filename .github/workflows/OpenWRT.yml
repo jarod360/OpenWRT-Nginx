@@ -5,10 +5,6 @@ on:
     types: [OpenWRT-Docker,X86_64]
   workflow_dispatch:
     inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
   watch:
     types: started
 
