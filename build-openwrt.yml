@@ -4,7 +4,6 @@ on:
   repository_dispatch:
     types: [OpenWRT-Docker,X86_64]
   workflow_dispatch:
-    inputs:
   watch:
     types: started
 
