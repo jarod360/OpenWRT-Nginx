@@ -10,7 +10,7 @@
 
 前面的自动编译以及个性化定制等修改，全部来源于P3TER大神的[代码](https://github.com/P3TERX/Actions-OpenWrt)及[教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)。</br>
 这里只说发布release的方法，部分代码借鉴或使用[id77](https://github.com/id77/OpenWrt-K2P-firmware)和[ncipollo](https://github.com/ncipollo/release-action)两位大神：</br>
- 1、自动编译及自动发布你可以forks本仓库!本仓库每天定时检测Lean's OpenWr的仓库，更新触发自动编译！</br>
+ 1、自动编译及自动发布你可以fork本仓库!本仓库每天定时检测Lean's OpenWr的仓库，更新触发自动编译！</br>
  2、点击右上角你的头像-settings-Developer settings-Personal access tokens生成新的令牌，选中public_repo，起名RELEASES,保存，同时复制令牌内容。</br>
  3、回到刚建的新仓库，settings-Secrets-Add a new secret(添加密匙），取名RELEASES_TOKEN,把刚才复制的令牌粘贴进去保存。</br>
  4、微信推送在仓库，settings-Secrets-Add a new secret(添加密匙），取名SERVERCHAN，在http://sc.ftqq.com 获取您的SCKEY，粘贴进去保存。</br>
