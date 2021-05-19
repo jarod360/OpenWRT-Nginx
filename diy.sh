@@ -18,6 +18,7 @@ sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po
 #移除不用软件包    
 rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
+rm -rf package/lean/luci-app-ttyd
 #添加额外软件包
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
@@ -31,6 +32,7 @@ svn co https://github.com/garypang13/openwrt-packages/trunk/libcron package/libc
 svn co https://github.com/garypang13/openwrt-packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/garypang13/openwrt-packages/trunk/rapidjson package/rapidjson
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
+git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
