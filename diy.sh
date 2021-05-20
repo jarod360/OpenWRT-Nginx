@@ -8,7 +8,7 @@ date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #改libwebsockets加密认证为单向
-sed -i '81s/DLWS_OPENSSL_CLIENT_CERTS\=\/etc\/ssl\/certs/DLWS_OPENSSL_CLIENT_CERTS\=OFF/' feeds/packages/libs/libwebsockets/Makefile
+sed -i '81s/\/etc\/ssl\/certs/\=OFF/' feeds/packages/libs/libwebsockets/Makefile
 #加入定时清理内存
 sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
 sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
