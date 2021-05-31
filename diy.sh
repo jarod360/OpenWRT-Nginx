@@ -20,7 +20,7 @@ rm -rf package/lean/luci-app-dockerman
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
-rm -rf package/service/uhttpd
+rm -rf package/network/services/uhttpd
 #添加额外软件包
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
