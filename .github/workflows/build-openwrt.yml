@@ -30,7 +30,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
   TZ: Asia/Shanghai
-  FILE_NAME: OpenWRT-Docker开发版
+  FILE_NAME: OpenWRT-Docker~Nginx版
 
 jobs:
   build:
@@ -135,7 +135,7 @@ jobs:
       uses: ncipollo/release-action@v1
       if: env.UPLOAD_RELEASE == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: ${{ env.DATE }} 🚀 OpenWRT-Docker| 开发版
+        name: ${{ env.DATE }} 🚀 OpenWRT-Docker| Nginx版
         allowUpdates: true
         tag: X86_64
         commit: master
