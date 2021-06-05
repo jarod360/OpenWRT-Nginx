@@ -139,7 +139,7 @@ jobs:
         allowUpdates: true
         tag: X86_64
         commit: master
-        token: ${{ secrets.RELEASES_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
         body: |
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
