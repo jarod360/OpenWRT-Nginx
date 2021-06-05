@@ -21,7 +21,7 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
-rm -rf feeds/package/utils/docker-ce
+rm -rf feeds/packages/utils/docker-ce
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
 svn co https://github.com/openwrt/packages/trunk/utils/docker package/docker
