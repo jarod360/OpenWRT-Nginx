@@ -68,3 +68,5 @@ git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+./scripts/feeds update -a
+./scripts/feeds install -a
