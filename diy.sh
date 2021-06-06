@@ -16,7 +16,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
 #sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
 #移除不用软件包    
-rm -rf package/lean/luci-app-dockerman
+rm -rf package/lean/luci-app-docker
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
