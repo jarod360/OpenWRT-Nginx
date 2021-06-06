@@ -21,12 +21,8 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
-rm -rf feeds/packages/utils/docker-compose
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
-svn co https://github.com/jarod360/packages/trunk/docker feeds/packages/utils/docker
-svn co https://github.com/jarod360/packages/trunk/dockerd feeds/packages/utils/dockerd
-svn co https://github.com/jarod360/packages/trunk/docker-compose feeds/packages/utils/docker-compose
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
@@ -47,6 +43,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 #git clone https://github.com/wwqgtxx-openwrt/luci-app-dockerman package/luci-app-dockerman
+sed -i ':a;N;s|+docker \\\n\t+dockerd|+docker-ce|g;ta' package/luci-app-dockerman/Makefile
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
 #git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
@@ -68,5 +65,3 @@ git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-./scripts/feeds update -a
-./scripts/feeds install -a -p packages
