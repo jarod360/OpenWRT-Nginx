@@ -21,10 +21,12 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
+rm -rf feeds/packages/utils/docker-compose
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
 svn co https://github.com/openwrt/packages/trunk/utils/docker package/docker
 svn co https://github.com/openwrt/packages/trunk/utils/dockerd package/dockerd
+svn co https://github.com/openwrt/packages/trunk/utils/docker-compose package/docker-compose
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
