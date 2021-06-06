@@ -69,4 +69,4 @@ git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon pack
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 ./scripts/feeds update -a
-./scripts/feeds install -a
+./scripts/feeds install -a -p packages
