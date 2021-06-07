@@ -25,7 +25,7 @@ env:
   CONFIG_FILE: .config
   DIY_SH: diy.sh
   UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
