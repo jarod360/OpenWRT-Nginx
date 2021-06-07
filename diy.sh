@@ -42,7 +42,7 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-sed -i ':a;N;s|+docker \\\n\t+dockerd|+docker-ce|g;ta' package/luci-app-dockerman/Makefile
+sed -i 's#+dockerd#+docker-ce#g' package/luci-app-dockerman/Makefile && sed -i '8d' package/luci-app-dockerman/Makefile
 #git clone https://github.com/wwqgtxx-openwrt/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
