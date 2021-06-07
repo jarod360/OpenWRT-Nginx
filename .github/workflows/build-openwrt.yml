@@ -131,18 +131,26 @@ jobs:
         name: wx64
         path: ${{ env.FIRMWARE }}
 
-    - name: Create release
-      uses: ncipollo/release-action@v1
-      if: env.UPLOAD_RELEASE == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
+
+    - name: Generate release tag
+      id: tag
+      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      run: |
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        touch release.txt
+        [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
+        [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
+        echo "::set-output name=status::success"
+
+    - name: Upload firmware to release
+      uses: softprops/action-gh-release@v1
+      if: steps.tag.outputs.status == 'success' && !cancelled()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ env.DATE }} 🚀 OpenWRT-Docker| Nginx版
-        allowUpdates: true
-        tag: X86_64
-        commit: master
-        TOKEN: ${{ secrets.RELEASES_TOKEN }}
-        body: |
-          ${{ env.useVersionInfo }}
-        artifacts: ${{ env.FIRMWARE }}/*
+        tag_name: ${{ steps.tag.outputs.release_tag }} 🚀 OpenWRT-Docker| Nginx版
+        body_path: release.txt
+        files: ${{ env.FIRMWARE }}/*
 
     - name: Upload firmware to cowtransfer #奶牛快传
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
@@ -171,7 +179,7 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        TOKEN: ${{ secrets.RELEASES_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: WeChat notification
       run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }}编译完成
