@@ -139,7 +139,7 @@ jobs:
         allowUpdates: true
         tag: X86_64
         commit: master
-        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+        TOKEN: ${{ secrets.RELEASES_TOKEN }}
         body: |
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
@@ -171,7 +171,7 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+        TOKEN: ${{ secrets.RELEASES_TOKEN }}
 
     - name: WeChat notification
       run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }}编译完成
