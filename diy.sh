@@ -60,7 +60,7 @@ rm -rf package/passwall/naiveproxy
 
 if [ -e feeds/packages/utils/docker-ce ];then
 sed -i '8d' package/luci-app-dockerman/Makefile
-sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
+sed -i 's/docker/docker-ce/g' package/luci-app-dockerman/Makefile
 fi
 
 # Add Rclone-OpenWrt
