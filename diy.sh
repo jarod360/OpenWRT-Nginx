@@ -59,7 +59,7 @@ rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
 
 if [ -e feeds/packages/utils/docker-ce ];then
-sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
+sed -i '8d' package/luci-app-dockerman/Makefile
 sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
 fi
 
