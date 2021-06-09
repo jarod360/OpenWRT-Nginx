@@ -145,7 +145,7 @@ jobs:
         token: ${{ secrets.TOKEN }}
         body: |
           ${{ env.useVersionInfo }}
-        artifacts: ${{ env.FIRMWARE }}/
+        artifacts: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
