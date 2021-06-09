@@ -134,7 +134,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y-%m-%d %H:%M")|🚀 x64-OpenWRT-Nginx"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H:%M")|🚀x64-OpenWRT-Nginx"
         touch release.txt
         echo "::set-output name=status::success"
     
