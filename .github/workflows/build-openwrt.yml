@@ -140,7 +140,7 @@ jobs:
       with:
         name: ${{ steps.tag.outputs.release_tag }}
         allowUpdates: true
-        tag: ${{ env.DATE }}
+        tag: ×64
         commit: master
         token: ${{ secrets.TOKEN }}
         body: |
