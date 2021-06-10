@@ -132,7 +132,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "RELEASE_TAG=$(TZ=UTC-8 date +"%Y-%m-%d")" >> $GITHUB_ENV
+        echo "RELEASE_TAG=$(TZ=UTC-8 date +"%Y.%m.%d-%H:%M")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
     
     - name: Upload firmware to release
@@ -141,7 +141,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: OpenWRT-Nginx 🚀 | 自动编译 / ${{ env.RELEASE_TAG }}
+        name: OpenWRT-Nginx 🚀 | 自动编译 / ${{ env.DATE1 }}
         tag_name: ${{ env.RELEASE_TAG }}
         body: |
             1、本固件内置Web服务由uhttpd更换为nginx，支持反向代理。
