@@ -148,6 +148,7 @@ jobs:
             2、本固件ttyd支持ssl单向认证连接，luci界面支持设置。
             3、本固件内含sub-web和subconverter，支持机场解析。
             4、本固件默认IP 192.168.0.250，密码为空。
+            5、本固件内含docker及科学上网插件。
             ${{ env.useVersionInfo }}
         files: ${{ env.FIRMWARE }}/*
 
