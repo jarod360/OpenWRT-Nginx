@@ -28,6 +28,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+  FILE_NAME: OpenWRT-Docker~Nginx版
 
 
 jobs:
@@ -53,6 +54,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+
     - name: Clone source code # 克隆源代码
       working-directory: /workdir
       run: |
@@ -66,6 +68,7 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
+
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
@@ -85,6 +88,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+
     - name: Compile the firmware
       id: compile
       run: |
