@@ -132,7 +132,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "RELEASE_TAG=$(TZ=UTC-8 date +"%Y.%m.%d-%H:%M")" >> $GITHUB_ENV
+        echo "RELEASE_TAG=$(TZ=UTC-8 date +"%Y.%m.%d-%H%M")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
     
     - name: Upload firmware to release
