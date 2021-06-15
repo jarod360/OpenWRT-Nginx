@@ -58,11 +58,6 @@ rm -rf package/passwall/xray-core
 rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
 
-if [ -e feeds/packages/utils/docker-ce ];then
-sed -i '8d' package/luci-app-dockerman/Makefile
-sed -i 's/dockerd/docker-ce/g' package/luci-app-dockerman/Makefile
-fi
-
 # Add Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
