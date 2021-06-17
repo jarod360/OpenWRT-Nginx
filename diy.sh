@@ -42,9 +42,8 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-#git clone https://github.com/wwqgtxx-openwrt/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
-git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
+#git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
 #git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 #git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
