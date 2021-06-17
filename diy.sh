@@ -48,7 +48,7 @@ git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-b
 #git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 #git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 rm -rf package/passwall/shadowsocksr-libev
