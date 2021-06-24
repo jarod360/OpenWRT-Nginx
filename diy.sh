@@ -9,8 +9,11 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-s
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #加入定时清理内存
 sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
+#加入认证证书
 sed -i '29a\nginx-util add_ssl _lan "zesun" "/etc/ssl/www.zesun.vip_chain.crt" "/etc/ssl/www.zesun.vip_key.key"' package/lean/default-settings/files/zzz-default-settings
+#移除ipv6tables
 sed -i '30a\opkg remove ip6tables' package/lean/default-settings/files/zzz-default-settings
+#赋予定时清理内存脚本权限
 sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
