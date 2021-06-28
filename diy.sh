@@ -26,6 +26,7 @@ rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
 #添加额外软件包
 svn co https://github.com/garypang13/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc
+svn co https://github.com/immortalwrt/packages/trunk/net/dnsproxy package/dnsproxy
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
