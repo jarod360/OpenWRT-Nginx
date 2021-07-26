@@ -13,6 +13,7 @@ sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" pack
 sed -i '29a\nginx-util add_ssl _lan "zesun" "/etc/ssl/www.zesun.vip_chain.crt" "/etc/ssl/www.zesun.vip_key.key"' package/lean/default-settings/files/zzz-default-settings
 #赋予定时清理内存脚本权限
 sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
+sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
