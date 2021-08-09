@@ -36,8 +36,6 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:      
-    - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }}开始编译
       
     - name: Checkout
       uses: actions/checkout@main
@@ -168,5 +166,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }}编译完成
