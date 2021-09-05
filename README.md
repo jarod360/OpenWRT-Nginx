@@ -3,7 +3,6 @@
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/jarod360/Lede-OpenWRT/blob/master/LICENSE)
 ![GitHub Stars](https://img.shields.io/github/stars/jarod360/Lede-OpenWRT.svg?style=flat-square&label=Stars&logo=github)
 ![GitHub Forks](https://img.shields.io/github/forks/jarod360/Lede-OpenWRT.svg?style=flat-square&label=Forks&logo=github)
-![GitHub Actions](https://img.shields.io/github/actions/jarod360/Lede-OpenWRT.svg?style=flat-square&label=Action&logo=github)
 
 注：本仓库纯属个人根据自己的设备配置使用，直接FORK本仓库是不能自动编译并发布release的，请看下面使用方法。
 
