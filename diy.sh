@@ -35,11 +35,11 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced pack
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
-svn co https://github.com/garypang13/openwrt-packages/trunk/jpcre2 package/jpcre2
-svn co https://github.com/garypang13/openwrt-packages/trunk/libcron package/libcron
-svn co https://github.com/garypang13/openwrt-packages/trunk/quickjspp package/quickjspp
-svn co https://github.com/garypang13/openwrt-packages/trunk/rapidjson package/rapidjson
-svn co https://github.com/zxlhhyccc/bf-package-master/trink/ctcgfw/toml11 package/toml11
+svn co https://github.com/kiddin9/openwrt-packages/trunk/jpcre2 package/jpcre2
+svn co https://github.com/kiddin9/openwrt-packages/trunk/libcron package/libcron
+svn co https://github.com/kiddin9/openwrt-packages/trunk/quickjspp package/quickjspp
+svn co https://github.com/kiddin9/openwrt-packages/trunk/rapidjson package/rapidjson
+svn co https://github.com/kiddin9/openwrt-packages/trunk/toml11 package/toml11
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
@@ -47,8 +47,8 @@ git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-git clone https://github.com/garypang13/luci-app-eqos package/luci-app-eqos
-#git clone https://github.com/garypang13/luci-app-baidupcs-web package/luci-app-baidupcs-web
+git clone https://github.com/kiddin9/luci-app-eqos package/luci-app-eqos
+#git clone https://github.com/kiddin9/luci-app-baidupcs-web package/luci-app-baidupcs-web
 #git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 #git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
