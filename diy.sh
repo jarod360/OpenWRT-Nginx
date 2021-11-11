@@ -39,6 +39,7 @@ svn co https://github.com/garypang13/openwrt-packages/trunk/jpcre2 package/jpcre
 svn co https://github.com/garypang13/openwrt-packages/trunk/libcron package/libcron
 svn co https://github.com/garypang13/openwrt-packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/garypang13/openwrt-packages/trunk/rapidjson package/rapidjson
+svn co https://github.com/zxlhhyccc/bf-package-master/trink/ctcgfw/toml11 package/toml11
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
