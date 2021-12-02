@@ -42,7 +42,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/rapidjson package/rapid
 svn co https://github.com/kiddin9/openwrt-packages/trunk/toml11 package/toml11
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
-git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
+git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
