@@ -36,7 +36,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timew
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
 svn co https://github.com/kiddin9/openwrt-packages/trunk/jpcre2 package/jpcre2
-git clone https://github.com/tindy2013/libcron package/libcron
+svn co https://github.com/jarod360/packages/trunk/libcron package/libcron
 svn co https://github.com/jarod360/packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/kiddin9/openwrt-packages/trunk/rapidjson package/rapidjson
 svn co https://github.com/kiddin9/openwrt-packages/trunk/toml11 package/toml11
