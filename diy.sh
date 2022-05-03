@@ -55,7 +55,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-p
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-git clonehttps://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
 rm -rf package/passwall/v2ray-plugin
