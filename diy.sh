@@ -9,6 +9,8 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-s
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #加入定时清理内存
 sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
+# 修改内核版本（版本内核默认5.15，还有5.4跟5.10内核）
+#sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #加入认证证书
 sed -i '29a\nginx-util add_ssl _lan "zesun" "/etc/ssl/www.zesun.vip_chain.crt" "/etc/ssl/www.zesun.vip_key.key"' package/lean/default-settings/files/zzz-default-settings
 #赋予定时清理内存脚本权限
