@@ -34,11 +34,13 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    timeout-minutes: 1200
 
     steps:      
       
     - name: Checkout
-      uses: actions/checkout@main
+      timeout-minutes: 1200
+      uses: actions/checkout@v2
 
     - name: Initialization environment
       env:
