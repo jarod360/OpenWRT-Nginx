@@ -152,11 +152,10 @@ jobs:
         tag_name: ${{ env.RELEASE_TAG }}
         body: |
             1、本固件内置Web服务由uhttpd更换为nginx，支持反向代理。
-            2、本固件内置内存自动清理脚本，低于设定阀值，自动清理。
-            3、本固件ttyd支持ssl单向认证连接，luci界面支持设置。
-            4、本固件内含sub-web和subconverter，支持订阅转换。
-            5、本固件默认IP 192.168.0.250，密码为空。
-            6、本固件内含docker及科学上网等插件。
+            2、本固件ttyd支持ssl单向认证连接，luci界面支持设置。
+            3、本固件内含sub-web和subconverter，支持订阅转换。
+            4、本固件默认IP 192.168.0.250，密码为空。
+            5、本固件内含docker及科学上网等插件。
             ${{ env.useVersionInfo }}
         files: ${{ env.FIRMWARE }}/*
 
