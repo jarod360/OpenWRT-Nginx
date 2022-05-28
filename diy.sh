@@ -41,7 +41,7 @@ svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
 svn co https://github.com/kiddin9/openwrt-packages/trunk/jpcre2 package/jpcre2
 svn co https://github.com/jarod360/packages/trunk/libcron package/libcron
-#svn co https://github.com/jarod360/packages/trunk/quickjspp package/quickjspp
+svn co https://github.com/jarod360/packages/trunk/quickjspp package/quickjspp
 svn co https://github.com/kiddin9/openwrt-packages/trunk/rapidjson package/rapidjson
 svn co https://github.com/kiddin9/openwrt-packages/trunk/toml11 package/toml11
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
