@@ -33,7 +33,7 @@ rm -rf feeds/luci/collections/luci
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
 #svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
-svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/smartdns package/smartdns
+svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
