@@ -32,10 +32,9 @@ rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
-svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
+#svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/siropboy/mypackages/trunk/smartdns package/smartdns
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-smartdns package/luci-app-smartdns
-#svn co https://github.com/Beginner-Go/my-packages/trunk/luci-app-koolproxyR  package/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
@@ -53,11 +52,6 @@ git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-#git clone https://github.com/kiddin9/luci-app-baidupcs-web package/luci-app-baidupcs-web
-#git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
-#git clone https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
-#git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
