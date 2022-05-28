@@ -28,6 +28,7 @@ sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po
 rm -rf feeds/luci/applications/luci-app-docker
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-ttyd
+rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
 #添加额外软件包
@@ -35,7 +36,7 @@ svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collec
 #svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
+svn co https://github.com/Dawneng/openwrt-packages/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
