@@ -31,6 +31,8 @@ rm -rf feeds/luci/applications/luci-app-ttyd
 rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-serverchan
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
 #svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
