@@ -10,8 +10,8 @@ sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/et
 #修改GCC版本
 sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
 sed -i '22,23d' toolchain/gcc/Config.version
-sed -i '21a\  default "11.2.0"' toolchain/gcc/Config.version
-sed -i '22a\ default "8.4.0"   if GCC_VERSION_8' toolchain/gcc/Config.version
+sed -i '21a\    default "11.2.0"' toolchain/gcc/Config.version
+sed -i '22a\    default "8.4.0"     if GCC_VERSION_8' toolchain/gcc/Config.version
 sed -i 's/default BINUTILS_USE_VERSION_2_34/default BINUTILS_USE_VERSION_2_37/g' toolchain/binutils/Config.in
 sed -i '5d' toolchain/binutils/Config.version
 sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
