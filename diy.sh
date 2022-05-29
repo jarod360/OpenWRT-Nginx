@@ -9,8 +9,7 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-s
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #修改GCC版本
 sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
-sed -i 's/default "11.2.0"	if GCC_VERSION_11/default "11.2.0"/g' toolchain/gcc/Config.version
-sed -i 's/default "8.4.0"/default "8.4.0"	if GCC_VERSION_8/g' toolchain/gcc/Config.version
+rm -rf toolchain/gcc/Config.version
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
@@ -41,6 +40,7 @@ rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-serverchan
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
+svn co https://github.com/jarod360/packages/trunk/Config.version toolchain/gcc/Config.version
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
