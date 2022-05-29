@@ -37,10 +37,8 @@ rm -rf feeds/packages/utils/ttyd
 rm -rf feeds/luci/collections/luci
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-serverchan
-rm -rf feeds/packages/devel/gcc
 #添加额外软件包
 svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
-svn co https://github.com/immortalwrt/packages/trunk/devel/gcc feeds/packages/devel/gcc
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
