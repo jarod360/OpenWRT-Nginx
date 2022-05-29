@@ -42,11 +42,12 @@ svn co https://github.com/Dawneng/openwrt-packages/trunk/luci-app-advanced packa
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
-svn co https://github.com/kiddin9/openwrt-packages/trunk/jpcre2 package/jpcre2
-svn co https://github.com/kiddin9/openwrt-packages/trunk/libcron package/libcron
-svn co https://github.com/kiddin9/openwrt-packages/trunk/rapidjson package/rapidjson
-svn co https://github.com/kiddin9/openwrt-packages/trunk/toml11 package/toml11
-svn co https://github.com/kiddin9/openwrt-packages/trunk/quickjspp package/quickjspp
+svn co https://github.com/immortalwrt/packages/trunk/libs/jpcre2 feeds/packages/libs/jpcre2
+svn co https://github.com/immortalwrt/packages/trunk/libs/libcron feeds/packages/libs/libcron
+svn co https://github.com/immortalwrt/packages/trunk/libs/libcryptopp feeds/packages/libs/libcryptopp
+svn co https://github.com/immortalwrt/packages/trunk/libs/rapidjson feeds/packages/libs/rapidjson
+svn co https://github.com/immortalwrt/packages/trunk/libs/toml11 feeds/packages/libs/toml11
+svn co https://github.com/immortalwrt/packages/trunk/libs/quickjspp feeds/packages/libs/quickjspp
 svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
