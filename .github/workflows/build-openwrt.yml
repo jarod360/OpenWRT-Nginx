@@ -90,12 +90,12 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-#    - name: Cache
-#      uses: klever1988/cachewrtbuild@main
-#       with:
-#         ccache: 'true'
-#         clean: ${{ contains(github.event.action, 'nocache') }}
-#         prefix: ${{ github.workspace }}/openwrt
+    - name: Cache
+      uses: klever1988/cachewrtbuild@main
+       with:
+         ccache: 'true'
+         clean: ${{ contains(github.event.action, 'nocache') }}
+         prefix: ${{ github.workspace }}/openwrt
 
     - name: Compile the firmware
       id: compile
