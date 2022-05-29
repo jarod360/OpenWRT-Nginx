@@ -7,6 +7,8 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
+#修改GCC版本
+sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
