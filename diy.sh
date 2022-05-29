@@ -9,6 +9,8 @@ sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-s
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #修改GCC版本
 sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
+sed -i 's/default "11.2.0"	if GCC_VERSION_11/default "11.2.0"/g' toolchain/gcc/Config.version
+sed -i 's/default "8.4.0"/default "8.4.0"	if GCC_VERSION_8/g' toolchain/gcc/Config.version
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
