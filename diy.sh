@@ -76,10 +76,46 @@ rm -rf package/passwall/v2ray-plugin
 rm -rf package/passwall/xray-core
 rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
-
-# Add Rclone-OpenWrt
-git clone https://github.com/ElonH/Rclone-OpenWrt package/Rclone-OpenWrt
 # Add luci-theme-atmaterial-ci
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# 调整argon登录框为居中
+sed -i "/.login-page {/i\\
+.login-container {\n\
+  margin: auto;\n\
+  height: 420px\!important;\n\
+  min-height: 420px\!important;\n\
+  left: 0;\n\
+  right: 0;\n\
+  bottom: 0;\n\
+  margin-left: auto\!important;\n\
+  border-radius: 15px;\n\
+  width: 350px\!important;\n\
+}\n\
+.login-form {\n\
+  background-color: rgba(255, 255, 255, 0)\!important;\n\
+  border-radius: 15px;\n\
+}\n\
+.login-form .brand {\n\
+  margin: 15px auto\!important;\n\
+}\n\
+.login-form .form-login {\n\
+    padding: 10px 50px\!important;\n\
+}\n\
+.login-form .errorbox {\n\
+  padding: 10px\!important;\n\
+}\n\
+.login-form .cbi-button-apply {\n\
+  margin: 15px auto\!important;\n\
+}\n\
+.input-group {\n\
+  margin-bottom: 1rem\!important;\n\
+}\n\
+.input-group input {\n\
+  margin-bottom: 0\!important;\n\
+}\n\
+.ftc {\n\
+  bottom: 0\!important;\n\
+}" feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/css/cascade.css
+sed -i "s/margin-left: 0rem \!important;/margin-left: auto\!important;/g" feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/css/cascade.css
