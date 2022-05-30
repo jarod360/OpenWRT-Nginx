@@ -26,6 +26,10 @@ sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-d
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #加入认证证书
 sed -i '29a\nginx-util add_ssl _lan "zesun" "/etc/ssl/www.zesun.vip_chain.crt" "/etc/ssl/www.zesun.vip_key.key"' package/lean/default-settings/files/zzz-default-settings
+#修改nginx默认传输文件大小
+sed -i "30a\uci set nginx._lan.client_max_body_size='800m'" package/lean/default-settings/files/zzz-default-settings
+sed -i "31a\uci set nginx._lan.client_header_buffer_size='32k'" package/lean/default-settings/files/zzz-default-settings
+sed -i "32a\uci commit nginx" package/lean/default-settings/files/zzz-default-settings
 #赋予宿主机密钥权限
 sed -i '58a\chmod 755 /root/.ssh & chmod 644 /root/.ssh/known_hosts & chmod 644 /root/.ssh/known_hosts.old' package/lean/default-settings/files/zzz-default-settings
 sed -i '59a\chmod 600 /root/.ssh/id_rsa.pub & chmod 600 /root/.ssh/id_rsa' package/lean/default-settings/files/zzz-default-settings
