@@ -63,10 +63,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
-        echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
-        echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
-        echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
 
     - name: Load custom feeds
       run: |
@@ -77,7 +73,10 @@ jobs:
       
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a -f
-
+        useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
+        echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
+        echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
+        echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
     - name: Openwrt AutoUpdate
       run: |
         TEMP=$(date +"Jarod`s OpenWrt_%Y%m%d_%H%M%S_")$(git rev-parse --short HEAD)
