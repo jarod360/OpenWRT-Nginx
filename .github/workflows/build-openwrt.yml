@@ -65,11 +65,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        cd openwrt
-        useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
-        echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
-        echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
-        echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
 
     - name: Load custom feeds
       run: |
@@ -211,7 +206,6 @@ jobs:
             3、本固件内含sub-web和subconverter，支持订阅转换。
             4、本固件默认IP 192.168.0.250，密码为空。
             5、本固件内含docker及科学上网等插件。
-            ${{ env.useVersionInfo }}
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
