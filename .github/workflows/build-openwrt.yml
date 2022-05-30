@@ -18,6 +18,11 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+      cache:
+        description: 'Cache wrt build'
+        required: false
+        default: 'true'
+
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -113,10 +118,10 @@ jobs:
         find dl -size -1024c -exec rm -f {} \;
 
     - name: Cache
+      if: github.event.inputs.cache == 'true' && github.event.inputs.cache != 'false'
       uses: klever1988/cachewrtbuild@main
       with:
          ccache: 'true'
-         clean: ${{ contains(github.event.action, 'nocache') }}
          prefix: ${{ github.workspace }}/openwrt
 
     - name: Compile the firmware
