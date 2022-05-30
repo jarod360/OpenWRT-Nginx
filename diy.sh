@@ -36,7 +36,7 @@ sed -i '59a\chmod 600 /root/.ssh/id_rsa.pub & chmod 600 /root/.ssh/id_rsa' packa
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
 sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
-#移除不用软件包    
+#移除内置软件包    
 rm -rf feeds/luci/applications/luci-app-docker
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-ttyd
