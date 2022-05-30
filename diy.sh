@@ -20,10 +20,6 @@ sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
-#加入定时清理内存
-#sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
-#赋予定时清理内存脚本权限
-#sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
 #赋予虚拟机关命令权限
 sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
 # 修改内核版本（版本内核默认5.15，还有5.4跟5.10内核）
