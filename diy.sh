@@ -5,9 +5,9 @@ sed -i 's/192.168.1.1/192.168.0.250/g' package/base-files/files/bin/config_gener
 #sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial-ColorIcon/g' feeds/luci/collections/luci/Makefile
 # 修改版本信息
 date=`date +%Y.%m.%d`
-sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
+#sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
-#修改GCC版本
+#修改GCC版本和binutils版本
 sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
 sed -i '22,23d' toolchain/gcc/Config.version
 sed -i '21a\\tdefault "11.2.0"' toolchain/gcc/Config.version
@@ -15,6 +15,8 @@ sed -i '22a\\tdefault "8.4.0"\t\tif GCC_VERSION_8' toolchain/gcc/Config.version
 sed -i 's/default BINUTILS_USE_VERSION_2_34/default BINUTILS_USE_VERSION_2_37/g' toolchain/binutils/Config.in
 sed -i '5d' toolchain/binutils/Config.version
 sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
+#移除uhttpd依赖
+sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
@@ -40,12 +42,11 @@ rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-ttyd
 rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/packages/utils/ttyd
-rm -rf feeds/luci/collections/luci
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-serverchan
 #添加额外软件包
-svn co https://github.com/jarod360/luci/trunk/collections/luci feeds/luci/collections/luci
-svn co https://github.com/jarod360//packages/trunk/gcc toolchain/gcc
+svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-nginx-manager package/luci-app-nginx-manager
+svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate package/luci-app-easyupdate
 svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
