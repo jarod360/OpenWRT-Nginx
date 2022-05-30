@@ -36,7 +36,6 @@ env:
   TZ: Asia/Shanghai
   FILE_NAME: OpenWRT-Docker~Nginx版
 
-
 jobs:
   build:
     runs-on: Ubuntu-20.04
@@ -45,8 +44,6 @@ jobs:
       
     - name: Checkout
       uses: actions/checkout@main
-      with:
-          fetch-depth: 0
 
     - name: Initialization environment
       env:
@@ -68,20 +65,22 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
-    - name: Load custom feeds
-      run: |
-        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-      
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a -f
+        cd openwrt
         useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
+
+    - name: Load custom feeds
+      run: |
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+
+    - name: Update feeds
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a -f
+
     - name: Openwrt AutoUpdate
       run: |
         TEMP=$(date +"Jarod`s OpenWrt_%Y%m%d_%H%M%S_")$(git rev-parse --short HEAD)
