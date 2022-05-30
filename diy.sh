@@ -24,7 +24,8 @@ sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-c
 #sed -i "28a\echo \'*/60 * * * * sh /etc/memclean.sh\' > /etc/crontabs/root" package/lean/default-settings/files/zzz-default-settings
 #赋予定时清理内存脚本权限
 #sed -i '56a\chmod 1777 /etc/memclean.sh' package/lean/default-settings/files/zzz-default-settings
-#sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
+#赋予虚拟机关命令权限
+sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
 # 修改内核版本（版本内核默认5.15，还有5.4跟5.10内核）
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #加入认证证书
@@ -70,6 +71,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-p
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+#删除passwall重复依赖
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
 rm -rf package/passwall/v2ray-plugin
