@@ -8,7 +8,7 @@ date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/etc/banner
 #修改luci显示cpu型号方式
-sed -i "33a\sed -i 's/pcdata(boardinfo.model/pcdata(boardinfo.system/g' /usr/lib/lua/luci/view/admin_status/index.htm" package/lean/default-settings/files/zzz-default-settings
+sed -i 's/pcdata(boardinfo.model/pcdata(boardinfo.system/g' package/lean/autocore/files/x86/index.htm
 #修改GCC版本和binutils版本
 sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
 sed -i '22,23d' toolchain/gcc/Config.version
