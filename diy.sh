@@ -98,7 +98,7 @@ sed -i "/.login-page {/i\\
   width: 350px\!important;\n\
 }\n\
 .login-form {\n\
-  background-color: rgba(255, 255, 255, 0)\!important;\n\
+  background-color: rgba(255, 255, 255, 0.4)\!important;\n\
   border-radius: 15px;\n\
 }\n\
 .login-form .brand {\n\
