@@ -19,6 +19,7 @@ sed -i '5d' toolchain/binutils/Config.version
 sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
 #移除uhttpd依赖
 sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
+sed -i 's/+xray-core//g' package/passwall2/Makefile
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
@@ -71,13 +72,13 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/fw876/helloworld.git package/helloworld
-#git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-#git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
 #删除passwall重复依赖
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
 rm -rf package/passwall/v2ray-plugin
-#rm -rf package/passwall/xray-core
+rm -rf package/passwall/xray-core
 rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
 rm -rf package/helloworld/xray-core
