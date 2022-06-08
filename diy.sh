@@ -71,8 +71,8 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/fw876/helloworld.git package/helloworld
-git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+#git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
 #删除passwall重复依赖
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
