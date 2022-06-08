@@ -19,7 +19,7 @@ sed -i '5d' toolchain/binutils/Config.version
 sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
 #移除uhttpd依赖
 sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
-sed -i 's/+xray-core//g' package/passwall2/Makefile
+sed -i 's/+xray-core//g' package/passwall2/luci-app-passwall2/Makefile
 #修改uwsgi超时时间
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
 sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
