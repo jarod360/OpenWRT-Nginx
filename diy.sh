@@ -77,7 +77,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
 rm -rf package/passwall/v2ray-plugin
-rm -rf package/passwall/xray-core
+#rm -rf package/passwall/xray-core
 rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
 rm -rf package/helloworld/xray-core
