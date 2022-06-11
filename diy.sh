@@ -58,7 +58,6 @@ svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
 svn co https://github.com/immortalwrt/packages/trunk/libs/jpcre2 package/jpcre2
 svn co https://github.com/immortalwrt/packages/trunk/libs/libcron package/libcron
-#svn co https://github.com/immortalwrt/packages/trunk/libs/libcryptopp package/libcryptopp
 svn co https://github.com/immortalwrt/packages/trunk/libs/rapidjson package/rapidjson
 svn co https://github.com/immortalwrt/packages/trunk/libs/toml11 package/toml11
 svn co https://github.com/immortalwrt/packages/trunk/libs/quickjspp package/quickjspp
