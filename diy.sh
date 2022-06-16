@@ -81,7 +81,7 @@ rm -rf package/passwall/v2ray-plugin
 rm -rf package/passwall/xray-core
 rm -rf package/passwall/xray-plugin
 rm -rf package/passwall/naiveproxy
-rm -rf package/helloworld/xray-core
+#rm -rf package/helloworld/xray-core
 rm -rf package/helloworld/v2raya/
 # Add luci-theme-atmaterial-ci
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
