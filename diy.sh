@@ -25,7 +25,7 @@ sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-c
 #赋予虚拟机关命令权限
 sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
 # 修改内核版本（版本内核默认5.15，还有5.4跟5.10内核）
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
+#sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #加入认证证书
 sed -i '29a\nginx-util add_ssl _lan "zesun" "/etc/ssl/www.zesun.vip_chain.crt" "/etc/ssl/www.zesun.vip_key.key"' package/lean/default-settings/files/zzz-default-settings
 #修改nginx默认传输文件大小
