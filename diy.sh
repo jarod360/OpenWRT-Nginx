@@ -10,13 +10,13 @@ sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/et
 #修改luci显示cpu型号方式
 sed -i 's/pcdata(boardinfo.model/pcdata(boardinfo.system/g' package/lean/autocore/files/x86/index.htm
 #修改GCC版本和binutils版本
-sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
-sed -i '22,23d' toolchain/gcc/Config.version
-sed -i '21a\\tdefault "11.2.0"' toolchain/gcc/Config.version
-sed -i '22a\\tdefault "8.4.0"\t\tif GCC_VERSION_8' toolchain/gcc/Config.version
-sed -i 's/default BINUTILS_USE_VERSION_2_34/default BINUTILS_USE_VERSION_2_37/g' toolchain/binutils/Config.in
-sed -i '5d' toolchain/binutils/Config.version
-sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
+#sed -i 's/default GCC_USE_VERSION_8/default GCC_USE_VERSION_11/g' toolchain/gcc/Config.in
+#sed -i '22,23d' toolchain/gcc/Config.version
+#sed -i '21a\\tdefault "11.2.0"' toolchain/gcc/Config.version
+#sed -i '22a\\tdefault "8.4.0"\t\tif GCC_VERSION_8' toolchain/gcc/Config.version
+#sed -i 's/default BINUTILS_USE_VERSION_2_34/default BINUTILS_USE_VERSION_2_37/g' toolchain/binutils/Config.in
+#sed -i '5d' toolchain/binutils/Config.version
+#sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
 #移除uhttpd依赖
 sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
 #修改uwsgi超时时间
