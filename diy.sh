@@ -71,9 +71,9 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall/tree/luci/luci-app-passwall package/luci-app-passwall
 #去除xray-core依赖
-sed -i 's/+xray-core//g' package/passwall2/luci-app-passwall2/Makefile
+sed -i 's/+xray-core//g' package/luci-app-passwall/Makefile
 #删除passwall重复依赖
 rm -rf package/passwall/shadowsocksr-libev
 rm -rf package/passwall/v2ray-core
