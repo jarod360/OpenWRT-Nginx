@@ -87,6 +87,9 @@ rm -rf package/helloworld/v2raya/
 git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon package/luci-theme-atmaterial-ColorIcon
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+#更新安装feeds
+./scripts/feeds update -a
+./scripts/feeds install -a
 # 调整argon登录框为居中
 sed -i "/.login-page {/i\\
 .login-container {\n\
