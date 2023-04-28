@@ -96,7 +96,7 @@ jobs:
         name: OpenWRT-Nginx 🚀 | 自动编译 / ${{ env.DATE1 }}
         allowUpdates: true
         removeArtifacts: true
-        tag_name: ${{ env.RELEASE_TAG }}
+        tag: ${{ env.RELEASE_TAG }}
         commit: master
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
