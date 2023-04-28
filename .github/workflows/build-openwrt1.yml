@@ -108,8 +108,9 @@ jobs:
           ${{ env.useVersionInfo }}
         artifacts: bin2/*
     - name: 删除工作流记录
-      uses: GitRML/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         retain_days: 1
         keep_minimum_runs: 3
     - name: 删除旧版本
