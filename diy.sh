@@ -53,7 +53,6 @@ svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/Dawneng/openwrt-packages/trunk/luci-app-advanced package/luci-app-advanced
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
 svn co https://github.com/immortalwrt/packages/trunk/libs/jpcre2 package/jpcre2
