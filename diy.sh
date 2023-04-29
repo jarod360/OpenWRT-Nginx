@@ -18,10 +18,10 @@ sed -i 's/pcdata(boardinfo.model/pcdata(boardinfo.system/g' package/lean/autocor
 #sed -i '5d' toolchain/binutils/Config.version
 #sed -i '14a\  default y if !TOOLCHAINOPTS' toolchain/binutils/Config.version
 #移除uhttpd依赖
-sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
+#sed -i 's/+uhttpd +uhttpd-mod-ubus //g' feeds/luci/collections/luci/Makefile
 #修改uwsgi超时时间
-sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
-sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
+#sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-webui.ini
+#sed -i '$a cgi-timeout = 600' feeds/packages/net/uwsgi/files-luci-support/luci-cgi_io.ini
 #赋予虚拟机关命令权限
 sed -i '57a\chmod 1777 /sbin/shutdown' package/lean/default-settings/files/zzz-default-settings
 # 修改内核版本（版本内核默认5.15，还有5.4跟5.10内核）
@@ -38,7 +38,7 @@ sed -i '59a\chmod 600 /root/.ssh/id_rsa.pub & chmod 600 /root/.ssh/id_rsa' packa
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
-sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
+#sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
 #移除内置软件包    
 rm -rf feeds/luci/applications/luci-app-docker
 rm -rf feeds/luci/themes/luci-theme-argon
