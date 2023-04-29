@@ -44,10 +44,10 @@ jobs:
       id: cache
       uses: stupidloud/cachewrtbuild@main
       with:
-        skip_saving: 'true'
+        skip_saving: 'flase'
         ccache: 'true'
         mixkey: "${{ env.FILENAME }}"
-        prefix: ${{ github.workspace }}/openwrt
+        prefix: "${{ github.workspace }}/openwrt"
     - name: 升级 feeds
       run: cd openwrt && ./scripts/feeds update -a
 
