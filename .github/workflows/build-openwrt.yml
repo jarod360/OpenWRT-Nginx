@@ -47,7 +47,7 @@ jobs:
         skip_saving: 'true'
         ccache: 'true'
         mixkey: "${{ env.FILENAME }}"
-        prefix: ${{ github.workspace }}/openwrt
+        prefix: 'openwrt'
     - name: 自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
