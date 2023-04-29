@@ -47,7 +47,12 @@ jobs:
         skip_saving: 'true'
         ccache: 'true'
         mixkey: "${{ env.FILENAME }}"
-        prefix: 'openwrt'
+        prefix: ${{ github.workspace }}/openwrt
+    - name: 升级 feeds
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: 安装 feeds
+      run: cd openwrt && ./scripts/feeds install -a
     - name: 自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
