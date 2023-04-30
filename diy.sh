@@ -49,18 +49,18 @@ rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-serverchan
 #添加额外软件包
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-nginx-manager package/luci-app-nginx-manager
-svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
+#svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn package/node-yarn
 svn co https://github.com/jarod360/packages/trunk/smartdns package/smartdns
 svn co https://github.com/zxlhhyccc/bf-package-master/trunk/ntlf9t/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/Dawneng/openwrt-packages/trunk/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
-svn co https://github.com/immortalwrt/packages/trunk/libs/jpcre2 package/jpcre2
-svn co https://github.com/immortalwrt/packages/trunk/libs/libcron package/libcron
-svn co https://github.com/immortalwrt/packages/trunk/libs/rapidjson package/rapidjson
-svn co https://github.com/immortalwrt/packages/trunk/libs/toml11 package/toml11
-svn co https://github.com/immortalwrt/packages/trunk/libs/quickjspp package/quickjspp
-svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
+#svn co https://github.com/jarod360/packages/trunk/sub-web package/sub-web
+#svn co https://github.com/immortalwrt/packages/trunk/libs/jpcre2 package/jpcre2
+#svn co https://github.com/immortalwrt/packages/trunk/libs/libcron package/libcron
+#svn co https://github.com/immortalwrt/packages/trunk/libs/rapidjson package/rapidjson
+#svn co https://github.com/immortalwrt/packages/trunk/libs/toml11 package/toml11
+#svn co https://github.com/immortalwrt/packages/trunk/libs/quickjspp package/quickjspp
+#svn co https://github.com/jarod360/packages/trunk/subconverter package/subconverter
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
